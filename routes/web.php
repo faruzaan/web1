@@ -13,5 +13,6 @@
 
 Route::get('/','PageController@index');
 Route::get('/loginn','PageController@login');
+Route::get('admin','AdminController@index');
 
 
