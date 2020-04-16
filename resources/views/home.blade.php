@@ -26,7 +26,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="{{asset('home')}}/logo.webp" alt=""></a>
+					<a class="navbar-brand logo_h" href="index.html"><img src="{{asset('assets')}}/img/me.png" alt="" width="100px"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -37,11 +37,9 @@
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-end">
 							<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Book A Class</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Test Prep</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Plan & Pricing</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+							<li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+							<li class="nav-item"><a class="nav-link" href="{{url('loginn')}}">login</a></li>
 						</ul>
 					</div>
 				</div>
@@ -50,7 +48,7 @@
 	</header>
 	<!--================ End Header Area =================-->
 	<!--================ Start About Us Area =================-->
-	<section class="about_area section_gap">
+	<section class="about_area section_gap" id="about">
 		<div class="container">
 			<div class="row justify-content-start align-items-center">
 				<div class="col-lg-5">
@@ -63,7 +61,7 @@
 					<div class="main_title text-left">
 						<h2>let’s <br>
 							Introduce about <br>
-							myself</h2>
+							RauClasses</h2>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit libero at obcaecati voluptate placeat, enim doloremque excepturi dolor dolore, ex odio nostrum, ab quod cum officia? Quidem, voluptate in!
 						</p>
@@ -506,6 +504,66 @@
 		</div>
 	</div>
 	<!--================ End Testimonial Area =================-->
+	<!--================Contact Area =================-->
+    <section class="contact_area section_gap" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="contact_info">
+                        <div class="info_item">
+                            <i class="lnr lnr-home"></i>
+                            <h6>California, United States</h6>
+                            <p>Santa monica bullevard</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-phone-handset"></i>
+                            <h6><a href="#">00 (440) 9865 562</a></h6>
+                            <p>Mon to Fri 9am to 6 pm</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-envelope"></i>
+                            <h6><a href="#">rauclasses@gmail.com</a></h6>
+                            <p>Send us your query anytime!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-right">
+                            <button type="submit" value="submit" class="primary_btn">
+                                <span>Send Message</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="mapBox" class="mapBox" 
+                data-lat="40.701083" 
+                data-lon="-74.1522848" 
+                data-zoom="13" 
+                data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
+                data-mlat="40.701083"
+                data-mlon="-74.1522848">
+            </div>
+        </div>
+    </section>
+    <!--================Contact Area =================-->
 	<!--================Footer Area =================-->
 	<footer class="footer_area">
 		<div class="container">
@@ -536,6 +594,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 	<!--================End Footer Area =================-->
+	
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
