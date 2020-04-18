@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V1</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="{{asset('login')}}/images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="{{asset('assets')}}/img/title.jpg"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{asset('login')}}/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -27,7 +27,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="{{asset('login')}}/images/img-01.png" alt="IMG">
+					<img src="{{asset('login')}}/images/img.png" alt="IMG">
 				</div>
 
 				<form class="login100-form validate-form">
@@ -50,13 +50,13 @@
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
-					<!-- <a href="{{url('pengguna')}}">
+					<a href="{{url('pengguna')}}">
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Login
 						</button>
 					</div>
-					</a> -->
+					</a>
 					<div class="text-center p-t-12">
 						<span class="txt1">
 							Forgot
@@ -73,6 +73,7 @@
 						</a>
 					</div>
 				</form>
+<<<<<<< HEAD
 					<a href="{{url('course')}}">
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
@@ -80,6 +81,8 @@
 						</button>
 					</div>
 					</a>
+=======
+>>>>>>> 7df4df6378df281093ef9a8efec81f8d97837e83
 			</div>
 		</div>
 	</div>
