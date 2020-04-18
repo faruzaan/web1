@@ -14,6 +14,7 @@
 Route::get('/','PageController@index');
 Route::get('/loginn','PageController@login');
 Route::get('/course','PageController@user');
+Route::get('/content','ContentController@index');
 Route::get('admin','AdminController@index');
 
 Route::get('user','UserController@index');
