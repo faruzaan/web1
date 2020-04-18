@@ -13,15 +13,16 @@
 
 Route::get('/','PageController@index');
 Route::get('/loginn','PageController@login');
-Route::get('/course','PageController@user');
-Route::get('/content','ContentController@index');
+Route::get('course','PageController@user');
 Route::get('admin','AdminController@index');
 
-Route::get('user','UserController@index');
-Route::get('user/add','UserController@create');
-Route::post('user/add', 'UserController@store');
-Route::get('user/{id}/edit','UserController@edit');
-Route::patch('user/{id}/edit','UserController@update');
-Route::delete('user/{id}/delete','UserController@destroy');
+Route::get('admin/user','UserController@index');
+Route::get('admin/user/add','UserController@create');
+Route::post('admin/user/add', 'UserController@store');
+Route::get('admin/user/{id}/edit','UserController@edit');
+Route::patch('admin/user/{id}/edit','UserController@update');
+Route::delete('admin/user/{id}/delete','UserController@destroy');
+
+Route::get('admin/content','ContentController@index');
 
 
