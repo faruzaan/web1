@@ -39,21 +39,17 @@
 							<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
 							<li class="nav-item"><a class="nav-link" href="#course">Course</a></li>
 							<li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false"><i class="lnr lnr-user"></i> Mike Wazowski</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="#">Log Activity</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+								</ul>
+							</li>
 						</ul>
                     </div>
-                </div>
-                <div class="dropdown show">
-                    <a class="secondary" href="#" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-caret-down"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Log Activity</a>
-                        <a class="dropdown-item" href="#">Settings</a>
-                        <a class="dropdown-item" href="#">Exit</a>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-lg-2 d-flex justify-content-center">
-                    <h4><i class="lnr lnr-user"></i> <h6>Mike Wazowski</h6></h4>
                 </div>
 			</nav>
 		</div>
