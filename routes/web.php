@@ -25,4 +25,17 @@ Route::delete('admin/user/{id}/delete','UserController@destroy');
 
 Route::get('admin/content','ContentController@index');
 
+Route::get('admin/video','VideosController@index');
+Route::get('admin/video/add','VideosController@create');
+Route::post('admin/video/add', 'VideosController@store');
+Route::get('admin/video/{id}/edit','VideosController@edit');
+Route::patch('admin/video/{id}/edit','VideosController@update');
+Route::delete('admin/video/{id}/delete','VideosController@destroy');
+
+Route::get('admin/classes','ClassesController@index');
+Route::get('admin/classes/add','ClassesController@create');
+Route::post('admin/classes/add', 'ClassesController@store');
+Route::get('admin/classes/{id}/edit','ClassesController@edit');
+Route::patch('admin/classes/{id}/edit','ClassesController@update');
+Route::delete('admin/classes/{id}/delete','ClassesController@destroy');
 

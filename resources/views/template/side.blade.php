@@ -38,10 +38,20 @@
           <span>User</span></a>
       </li>
       <!-- Nav Item - Charts -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="{{url('admin/content')}}">
           <i class="fas fa-fw fa-digital-tachograph"></i>
           <span>Content</span></a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('admin/classes')}}">
+          <i class="fas fa-fw fa-digital-tachograph"></i>
+          <span>Class</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('admin/video')}}">
+          <i class="fas fa-fw fa-video"></i>
+          <span>Videos</span></a>
       </li>
       
 

@@ -13,20 +13,20 @@ class UserController extends Controller
     }
     public function create()
     {
-    	return view('user/form');
+    	return view('admin/user/form');
     }
     public function store(Request $request)
     {
     	$input = $request->all();
     	$status = \App\User1::create($input);
 
-        if ($status) return redirect('/user')->with('success','Data Successfully Added');
-        else return redirect('/user')->with('error','Failed Data Added');
+        if ($status) return redirect('admin/user')->with('success','Data Successfully Added');
+        else return redirect('admin/user')->with('error','Failed Data Added');
     }
     public function edit($id)
     {
         $data['result'] = \App\User1::where('id_user',$id)->first();
-        return view('user/form')->with($data);
+        return view('admin/user/form')->with($data);
     }
     public function update(Request $request,$id)
     {
@@ -37,15 +37,15 @@ class UserController extends Controller
         $result = \App\User1::where('id_user', $id)->first();
         $status = $result->update($input);
 
-        if ($status) return redirect('/user')->with('success','Data Successfully Change');
-        else return redirect('/user')->with('error','Data Failed to Change');
+        if ($status) return redirect('admin/user')->with('success','Data Successfully Change');
+        else return redirect('admin/user')->with('error','Data Failed to Change');
     }
     public function destroy(Request $request, $id)
     {
         $result = \App\User1::where('id_user',$id)->first();
         $status = $result->delete();
 
-        if ($status) return redirect('/user')->with('success','Data Successfully Delete');
-        else return redirect('/user')->with('error','Data Failed to Delete');
+        if ($status) return redirect('admin/user')->with('success','Data Successfully Delete');
+        else return redirect('admin/user')->with('error','Data Failed to Delete');
     }
 }
