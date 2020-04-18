@@ -23,8 +23,8 @@
                   <thead>
                     <tr>
                       <th>Id</th>   
-                      <th>Grade</th>
                       <th>Class</th>
+                      <th>Subject</th>
                       <th>Price</th>
                       <th>Action</th>
                     </tr>
@@ -33,8 +33,8 @@
                     @foreach ($result as $row)
                     <tr>
                       <td>{{ !empty($i) ? ++$i : $i = 1 }}</td>
-                      <td>{{ $row->grade }}</td>
-                      <td>{{ $row->class }}</td>
+                      <td>{{ $row->class }}th</td>
+                      <td>{{ $row->subject }}</td>
                       <td>₹ {{ $row->price }}</td>
                       <td><a title="Edit" href="{{url("admin/classes/$row->id_class/edit")}}" class="btn btn-sm btn-warning"><i class="fas fa-pen-square"></i></a>
                         <form action="{{url("admin/classes/$row->id_class/delete")}}" method="POST" style="display: inline;">

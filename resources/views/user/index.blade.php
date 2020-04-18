@@ -22,7 +22,8 @@
                 <table class="table table-bordered" id="data_Table" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Id</th>   
+                      <th>Id</th>
+                      <th>Image</th>  
                       <th>First Name</th>
                       <th>Last Name</th>
                       <th>Email</th>
@@ -35,6 +36,7 @@
                     @foreach ($result as $row)
                     <tr>
                       <td>{{ !empty($i) ? ++$i : $i = 1 }}</td>
+                      <td><img src="{{ asset('assets/'.@$row->image) }}" alt="" width="100px"></td>
                       <td>{{ $row->first_name }}</td>
                       <td>{{ $row->last_name }}</td>
                       <td>{{ $row->email }}</td>

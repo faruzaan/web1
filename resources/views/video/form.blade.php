@@ -12,7 +12,7 @@
                 {{empty($result) ? 'Add' : 'Edit'}}
                 Class</h1>
               </div>
-              <form class="user" action="{{empty($result) ? url('admin/video/add') : url("admin/video/$result->id_vid/edit")}}" method="POST" enctype=”multipart/form-data”>
+              <form class="user" action="{{empty($result) ? url('admin/video/add') : url("admin/video/$result->id_vid/edit")}}" method="POST" enctype="multipart/form-data">
               	{{ csrf_field() }}
 
                 @if (!empty($result))

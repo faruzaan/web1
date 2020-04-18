@@ -34,11 +34,11 @@
                     @foreach ($result as $row)
                     <tr>
                       <td>{{ !empty($i) ? ++$i : $i = 1 }}</td>
-                      <td>{{ $row->class->grade }}</td>
                       <td>{{ $row->class->class }}</td>
+                      <td>{{ $row->class->subject }}</td>
                       <td>{{ $row->desc }}</td>
                       <td>
-                        <video control>
+                        <video controls width="500px">
                           <source src="{{ asset('uploads/'.@$row->video) }}" type="video/mp4">
                         </video>
                       </td>

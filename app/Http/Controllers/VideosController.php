@@ -43,7 +43,7 @@ class VideosController extends Controller
         $result = \App\Videos::where('id_vid', $id)->first();
         if($request->hasFile('video'))
         {
-            $filename = $input['id_vid'].".".$request->file('video')->getClientOriginalExtension();
+            $filename = $id.".".$request->file('video')->getClientOriginalExtension();
             $request->file('video')->storeAs('',$filename);
             $input['video'] = $filename;
         }
