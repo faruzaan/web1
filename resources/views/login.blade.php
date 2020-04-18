@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V1</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="{{asset('login')}}/images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="{{asset('assets')}}/img/title.jpg"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{asset('login')}}/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -27,7 +27,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="{{asset('login')}}/images/img-01.png" alt="IMG">
+					<img src="{{asset('login')}}/images/img.png" alt="IMG">
 				</div>
 
 				<form class="login100-form validate-form">
