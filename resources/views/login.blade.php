@@ -50,13 +50,13 @@
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
-					<!-- <a href="{{url('pengguna')}}">
+					<a href="{{url('pengguna')}}">
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Login
 						</button>
 					</div>
-					</a> -->
+					</a>
 					<div class="text-center p-t-12">
 						<span class="txt1">
 							Forgot
@@ -73,13 +73,6 @@
 						</a>
 					</div>
 				</form>
-					<a href="{{url('pengguna')}}">
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
-					</a>
 			</div>
 		</div>
 	</div>
