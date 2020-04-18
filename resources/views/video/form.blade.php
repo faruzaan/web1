@@ -12,7 +12,7 @@
                 {{empty($result) ? 'Add' : 'Edit'}}
                 Class</h1>
               </div>
-              <form class="user" action="{{empty($result) ? url('admin/video/add') : url("admin/video/$result->id_vid/edit")}}" method="POST">
+              <form class="user" action="{{empty($result) ? url('admin/video/add') : url("admin/video/$result->id_vid/edit")}}" method="POST" enctype=”multipart/form-data”>
               	{{ csrf_field() }}
 
                 @if (!empty($result))
@@ -24,8 +24,9 @@
                 <div class="form-group">
                     <input type="text" class="form-control form-control-user" name="desc" id="desc" placeholder="Description" value="{{ @$result->desc }}">                
                 </div>
+                <label for="">Video</label>
                 <div class="form-group">
-                    <input type="text" class="form-control form-control-user" name="video" id="video" placeholder="Video" value="{{ @$result->video }}">                
+                    <input type="file" class="" name="video" id="video" placeholder="Video" value="{{ @$result->video }}">                
                 </div>
                 <button type="submit" class="btn btn-primary btn-user btn-block">Save</button>
                 <!-- <a href="login.html" class="btn btn-primary btn-user btn-block">

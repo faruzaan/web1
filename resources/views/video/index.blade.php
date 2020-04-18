@@ -37,7 +37,11 @@
                       <td>{{ $row->class->grade }}</td>
                       <td>{{ $row->class->class }}</td>
                       <td>{{ $row->desc }}</td>
-                      <td>{{ $row->video }}</td>
+                      <td>
+                        <video control>
+                          <source src="{{ asset('uploads/'.@$row->video) }}" type="video/mp4">
+                        </video>
+                      </td>
                       <td><a title="Edit" href="{{url("admin/video/$row->id_vid/edit")}}" class="btn btn-sm btn-warning"><i class="fas fa-pen-square"></i></a>
                         <form action="{{url("admin/video/$row->id_vid/delete")}}" method="POST" style="display: inline;">
                           {{csrf_field()}}

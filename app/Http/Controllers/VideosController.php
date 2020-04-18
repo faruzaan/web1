@@ -17,7 +17,13 @@ class VideosController extends Controller
     }
     public function store(Request $request)
     {
-    	$input = $request->all();
+        $input = $request->all();
+        if($request->hasFile('video'))
+        {
+            $filename = $input['id_vid'].".".$request->file('video')->getClientOriginalExtension();
+            $request->file('video')->storeAs('',$filename);
+            $input['video'] = $filename;
+        }
     	$status = \App\Videos::create($input);
 
         if ($status) return redirect('admin/video')->with('success','Data Successfully Added');
@@ -26,7 +32,7 @@ class VideosController extends Controller
     public function edit($id)
     {
         $data['result'] = \App\Videos::where('id_vid',$id)->first();
-        return view('admin/video/form')->with($data);
+        return view('video/form')->with($data);
     }
     public function update(Request $request,$id)
     {
@@ -35,6 +41,12 @@ class VideosController extends Controller
 
         $input = $request->all();
         $result = \App\Videos::where('id_vid', $id)->first();
+        if($request->hasFile('video'))
+        {
+            $filename = $input['id_vid'].".".$request->file('video')->getClientOriginalExtension();
+            $request->file('video')->storeAs('',$filename);
+            $input['video'] = $filename;
+        }
         $status = $result->update($input);
 
         if ($status) return redirect('admin/video')->with('success','Data Successfully Change');

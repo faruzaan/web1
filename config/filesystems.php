@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => 'upload',
 
     /*
     |--------------------------------------------------------------------------
@@ -62,6 +62,12 @@ return [
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
+        ],
+
+        'upload' =>[
+            'driver' => 'local',
+            'root' => public_path('uploads'),
+            'visibility' => 'public',
         ],
 
     ],
