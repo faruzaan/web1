@@ -11,6 +11,6 @@ class Classes extends Model
     protected $table = 't_class';
 
     protected $fillable = [
-        'class','subject','price'
+        'class','subject'
     ];
 }

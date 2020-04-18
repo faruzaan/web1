@@ -13,7 +13,7 @@ class UserController extends Controller
     }
     public function create()
     {
-    	return view('admin/user/form');
+    	return view('user/form');
     }
     public function store(Request $request)
     {

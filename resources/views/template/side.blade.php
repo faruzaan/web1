@@ -37,6 +37,16 @@
           <i class="fas fa-fw fa-users"></i>
           <span>User</span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('admin/paymentinfo')}}">
+          <i class="fas fa-fw fa-money-bill-alt"></i>
+          <span>Payment</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('admin/price')}}">
+          <i class="fas fa-fw fa-tags"></i>
+          <span>Class Price</span></a>
+      </li>
       <!-- Nav Item - Charts -->
       <!-- <li class="nav-item">
         <a class="nav-link" href="{{url('admin/content')}}">

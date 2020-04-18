@@ -10,9 +10,9 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">
                 {{empty($result) ? 'Add' : 'Edit'}}
-                Class</h1>
+                Price</h1>
               </div>
-              <form class="user" action="{{empty($result) ? url('admin/video/add') : url("admin/video/$result->id_vid/edit")}}" method="POST" enctype="multipart/form-data">
+              <form class="user" action="{{empty($result) ? url('admin/price/add') : url("admin/price/$result->id/edit")}}" method="POST">
               	{{ csrf_field() }}
 
                 @if (!empty($result))
@@ -22,7 +22,7 @@
                   <label class="control-label col-sm-2">Class</label>
                   <div class="col-sm-10">
                     <select name="id_class" id="" class="form-control">
-                      <option value="" disabled selected hidden>Pilih</option>
+                      <option value="" disabled selected hidden>Choose</option>
                       @foreach (\App\Classes::all() as $class)
                         <option value="{{$class->id_class}}" {{@$result->id_class == $class->id_class ? 'selected':''}}>{{$class->class}}th {{$class->subject}}</option>
                       @endforeach
@@ -30,11 +30,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control form-control-user" name="desc" id="desc" placeholder="Description" value="{{ @$result->desc }}">                
-                </div>
-                <label for="">Video</label>
-                <div class="form-group">
-                    <input type="file" class="" name="video" id="video" placeholder="Video" value="{{ @$result->video }}">                
+                    <input type="text" class="form-control form-control-user" name="price" id="price" placeholder="Price" value="{{ @$result->price }}">                
                 </div>
                 <button type="submit" class="btn btn-primary btn-user btn-block">Save</button>
                 <!-- <a href="login.html" class="btn btn-primary btn-user btn-block">

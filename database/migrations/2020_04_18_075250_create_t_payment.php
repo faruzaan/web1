@@ -15,6 +15,11 @@ class CreateTPayment extends Migration
     {
         Schema::create('t_payment', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('id_user');
+            $table->string('math');
+            $table->string('payment_math_date');
+            $table->string('sciene');
+            $table->string('payment_science_date');
             $table->timestamps();
         });
     }

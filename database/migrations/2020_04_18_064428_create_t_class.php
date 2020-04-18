@@ -15,9 +15,8 @@ class CreateTClass extends Migration
     {
         Schema::create('t_class', function (Blueprint $table) {
             $table->bigIncrements('id_class');
-            $table->string('grade');
             $table->string('class');
-            $table->string('price');
+            $table->string('subject');
             $table->timestamps();
         });
     }

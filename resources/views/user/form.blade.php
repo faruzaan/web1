@@ -12,7 +12,7 @@
                 {{empty($result) ? 'Add' : 'Edit'}}
                 User</h1>
               </div>
-              <form class="user" action="{{empty($result) ? url('user/add') : url("user/$result->id_user/edit")}}" method="POST">
+              <form class="user" action="{{empty($result) ? url('admin/user/add') : url("admin/user/user/$result->id_user/edit")}}" method="POST">
               	{{ csrf_field() }}
 
                 @if (!empty($result))

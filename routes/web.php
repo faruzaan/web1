@@ -39,3 +39,10 @@ Route::get('admin/classes/{id}/edit','ClassesController@edit');
 Route::patch('admin/classes/{id}/edit','ClassesController@update');
 Route::delete('admin/classes/{id}/delete','ClassesController@destroy');
 
+Route::get('admin/price','PriceController@index');
+Route::get('admin/price/add','PriceController@create');
+Route::post('admin/price/add', 'PriceController@store');
+Route::get('admin/price/{id}/edit','PriceController@edit');
+Route::patch('admin/price/{id}/edit','PriceController@update');
+Route::delete('admin/price/{id}/delete','PriceController@destroy');
+
