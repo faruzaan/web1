@@ -73,7 +73,7 @@
 						</a>
 					</div>
 				</form>
-					<a href="{{url('pengguna')}}">
+					<a href="{{url('course')}}">
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Login

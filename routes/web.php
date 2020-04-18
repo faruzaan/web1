@@ -13,7 +13,7 @@
 
 Route::get('/','PageController@index');
 Route::get('/loginn','PageController@login');
-Route::get('/pengguna','PageController@user');
+Route::get('/course','PageController@user');
 Route::get('admin','AdminController@index');
 
 Route::get('user','UserController@index');
